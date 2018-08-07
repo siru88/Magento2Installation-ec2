@@ -50,3 +50,5 @@ mv /var/www/html /var/www/html.bak
 cd /var/www
 git clone https://github.com/magento/magento2.git
 mv magento2 /var/www/html
+cd /var/www/html
+/usr/local/bin/composer install
