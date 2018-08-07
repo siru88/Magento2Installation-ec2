@@ -3,7 +3,7 @@
 yum install mysql57-server mysql57 -y
 
 #Install PHP and HTTPD service
-yum install php71-pdo php71-mcrypt php71-mbstring php71-mysqlnd php71-curl php71-intl php71-cli php71 httpd24-devel httpd24-tools httpd24 -y
+yum install php71-pdo php71-mcrypt php71-mbstring php71-mysqlnd php71-curl php71-intl php71-cli php71-gd php71-bcmath php71-soap php71 httpd24-devel httpd24-tools httpd24 -y
 
 #Make HTTPD and MySQL service to start on boot.
 chkconfig httpd on
@@ -52,3 +52,5 @@ git clone https://github.com/magento/magento2.git
 mv magento2 /var/www/html
 cd /var/www/html
 /usr/local/bin/composer install
+chown ec2-user:apache /var/www/html -R
+chmod 2775 /var/www/html -R
