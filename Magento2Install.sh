@@ -39,9 +39,14 @@ echo [client] > /root/.my.cnf
 echo user=root >> /root/.my.cnf
 echo password="\"$password"\" >> /root/.my.cnf
 
-
+#Installing Composer command
+cd /tmp
+sudo curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
 #Install zip and unzip commands
 yum install zip unzip git -y
-cd /var/www/html
+#Downloading Magento2 files and placing it in /var/www/html Document Root
+mv /var/www/html /var/www/html.bak
+cd /var/www
 git clone https://github.com/magento/magento2.git
-mv magento2/* magento2/.* /var/www/html
+mv magento2 /var/www/html
