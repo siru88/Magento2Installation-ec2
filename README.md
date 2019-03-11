@@ -5,6 +5,6 @@ chmod +x Magento2Installation.sh
 
 /bin/bash Magento2Installation.sh
 
-Database logins for site will be placed in /home/centos/dblogin.txt please use it to install the site via web browser.
+Database logins for site will be placed in /home/ec2-user/dblogin.txt please use it to install the site via web browser.
 
 In case of any issues please contact us through https://www.easydeploy.cloud/contact-us/
